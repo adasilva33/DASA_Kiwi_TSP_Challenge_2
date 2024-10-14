@@ -25,7 +25,7 @@ Simulations for each considered instance were conducted, testing various paramet
     \label{table:Grid search}
 \end{table}
 
-After running the simulations with the grid search parameters defined in Table \ref{table:Grid search}, we compared our results with the best known solutions, as presented in Table \ref{table:Best result vs state of the art} \cite{reinforcement_learning_yaro}. Note that only a subset of problem instances was considered due to the computational complexity and time constraints associated with evaluating all possible configurations for larger instances. 
+After running the simulations with the grid search parameters defined in Table \ref{table:Grid search}, we compared our results with the best known solutions, as presented in Table \ref{table:Best result vs state of the art} \cite{reinforcement_learning_yaro}. Note that only a subset of problem instances were considered due to the computational complexity and time constraints associated with evaluating all possible configurations for larger instances. 
 
 \begin{table}[h]
     \centering
@@ -79,13 +79,13 @@ Figure \ref{fig:cp_vs_selection_3} presents box plots illustrating the relations
 
 While UCB1T may require more time to converge, it generally explores the search tree more effectively, leading to better overall performance. One can notice that $C_p$'s correlation with the UCB1T selection policy for $I_3$ is low.
 
-\subsubsection*{Analysis of Expansion Ratio $c$}
+\subsubsection*{Analysis of Expansion ratio $c$}
 
 When comparing the relationship between the expansion ratio (the proportion of expanded child nodes that have the cheapest flight connection among the chosen number of children) and the time required to find a solution for the UCB and UCB1T policies, several conclusions can be drawn:
 
 \begin{itemize}
     \item \textbf{UCB finds solutions faster than UCB1T:}
-          Across all expansion ratio values, the UCB policy consistently finds solutions more quickly than UCB1T. This suggests that UCB, being less aggressive in exploration, converges on solutions faster.
+          Across all expansion ratio values, the UCB policy consistently finds solutions quicker than UCB1T. This suggests that UCB, being less aggressive in exploration, converges on solutions faster.
 
     \item \textbf{Higher ratios lead to faster convergence:}
           For both policies, the time to find a solution generally decreases as the expansion ratio increases. This indicates a more efficient search process when expanded nodes are less randomly chosen from the set of available actions. However, for more complex instances, maintaining a ratio \( r \in [0.3, 0.7] \) is crucial to avoid getting stuck in potential leaf nodes.
@@ -119,7 +119,7 @@ In Figure \ref{fig:sim_perf_vs_c_3}, the median distributions for different scen
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=.4\textwidth]{Figures/3 - Simulation performance vs Expansion ratio.png}
-    \caption{Simulation performance vs Expansion Ratio - Instance 3}
+    \caption{Simulation performance vs Expansion ratio - Instance 3}
     \label{fig:sim_perf_vs_c_3}
 \end{figure}
 
